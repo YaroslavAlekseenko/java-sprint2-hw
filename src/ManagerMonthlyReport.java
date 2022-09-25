@@ -37,10 +37,17 @@ public class ManagerMonthlyReport {
                 Double.parseDouble(tokens[3])
         );
     }
+
+    void checkMonthlyReport() {
+        if (monthlyReports.isEmpty()) {
+            System.out.println("Месячные отчёты не считаны");
+        }
+    }
                                                                             // Вывод информации о всех месячных отчётах
     void printMonthlyReport() {
-        if (monthlyReports == null) {
-            System.out.println("Месячный отчёт не считан");
+        if (monthlyReports.isEmpty()) {
+            System.out.println("Месячные отчёты не считаны");
+            return;
         }
 
         double sum, sum0;
@@ -124,10 +131,6 @@ public class ManagerMonthlyReport {
     }
                                                                                         // Методы для сравнения отчётов
     double compareJanuaryTrue() {
-        if (monthlyReports == null) {
-            System.out.println("Месячный отчёт не считан");
-        }
-
         double januaryTrue = 0;
         for (MonthlyReport report : monthlyReports) {
             if (report == monthlyReports.get(0)) {
@@ -142,10 +145,6 @@ public class ManagerMonthlyReport {
     }
 
     double compareJanuaryFalse() {
-        if (monthlyReports == null) {
-            System.out.println("Месячный отчёт не считан");
-        }
-
         double januaryFalse = 0;
         for (MonthlyReport report : monthlyReports) {
             if (report == monthlyReports.get(0)) {
@@ -160,10 +159,6 @@ public class ManagerMonthlyReport {
     }
 
     double compareFebruaryTrue() {
-        if (monthlyReports == null) {
-            System.out.println("Месячный отчёт не считан");
-        }
-
         double februaryTrue = 0;
         for (MonthlyReport report : monthlyReports) {
             if (report == monthlyReports.get(1)) {
@@ -178,10 +173,6 @@ public class ManagerMonthlyReport {
     }
 
     double compareFebruaryFalse() {
-        if (monthlyReports == null) {
-            System.out.println("Месячный отчёт не считан");
-        }
-
         double februaryFalse = 0;
         for (MonthlyReport report : monthlyReports) {
             if (report == monthlyReports.get(1)) {
@@ -196,10 +187,6 @@ public class ManagerMonthlyReport {
     }
 
     double compareMarchTrue() {
-        if (monthlyReports == null) {
-            System.out.println("Месячный отчёт не считан");
-        }
-
         double marchTrue = 0;
         for (MonthlyReport report : monthlyReports) {
             if (report == monthlyReports.get(2)) {
@@ -214,10 +201,6 @@ public class ManagerMonthlyReport {
     }
 
     double compareMarchFalse() {
-        if (monthlyReports == null) {
-            System.out.println("Месячный отчёт не считан");
-        }
-
         double marchFalse = 0;
         for (MonthlyReport report : monthlyReports) {
             if (report == monthlyReports.get(2)) {

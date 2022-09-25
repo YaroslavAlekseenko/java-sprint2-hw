@@ -21,6 +21,15 @@ public class Main {
                 managerYearlyReport.readYearlyReport("resources/y.2021.csv");
 
             } else if (command == 3) {                          // Сравнение доходов и расходов в месячных и годовом отчётах
+                                                                // Проверка загрузки отчётов
+                managerMonthlyReport.checkMonthlyReport();
+                managerYearlyReport.checkYearlyReport();
+                if (managerMonthlyReport.monthlyReports.isEmpty()) {
+                    return;
+                }
+                if (managerYearlyReport.yearlyReport == null) {
+                    return;
+                }
                                                                 // Сравнение доходов за январь
                 if (managerMonthlyReport.compareJanuaryFalse() == managerYearlyReport.compareJanuaryF()) {
                     System.out.println("\nДоходы в январе равны");

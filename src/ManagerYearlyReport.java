@@ -29,10 +29,17 @@ public class ManagerYearlyReport {
             tokens[2]
         );
     }
+
+    void checkYearlyReport() {
+        if (yearlyReport == null) {
+            System.out.println("Годовой отчёт не считан");
+        }
+    }
                                                                                     // Вывод информации о годовом отчёте
     void printYearlyReport() {
         if (yearlyReport == null) {
             System.out.println("Годовой отчёт не считан");
+            return;
         }
 
         System.out.println("\nГодовой отчёт: " + 2021);
@@ -82,10 +89,6 @@ public class ManagerYearlyReport {
     }
                                                                                         // Методы для сравнения отчётов
     int compareJanuaryT() {
-        if (yearlyReport == null) {
-            System.out.println("Годовой отчёт не считан");
-        }
-
         int januaryT = 0;
         for (RecordYear record : yearlyReport.records) {
             if (record.isExpense.equals("true") && record.month == 01) {
@@ -96,10 +99,6 @@ public class ManagerYearlyReport {
     }
 
     int compareJanuaryF() {
-        if (yearlyReport == null) {
-            System.out.println("Годовой отчёт не считан");
-        }
-
         int januaryF = 0;
         for (RecordYear record : yearlyReport.records) {
             if (record.isExpense.equals("false") && record.month == 01) {
@@ -110,10 +109,6 @@ public class ManagerYearlyReport {
     }
 
     int compareFebruaryT() {
-        if (yearlyReport == null) {
-            System.out.println("Годовой отчёт не считан");
-        }
-
         int februaryT = 0;
         for (RecordYear record : yearlyReport.records) {
             if (record.isExpense.equals("true") && record.month == 02) {
@@ -124,10 +119,6 @@ public class ManagerYearlyReport {
     }
 
     int compareFebruaryF() {
-        if (yearlyReport == null) {
-            System.out.println("Годовой отчёт не считан");
-        }
-
         int februaryF = 0;
         for (RecordYear record : yearlyReport.records) {
             if (record.isExpense.equals("false") && record.month == 02) {
@@ -138,9 +129,6 @@ public class ManagerYearlyReport {
     }
 
     int compareMarchT() {
-        if (yearlyReport == null) {
-            System.out.println("Годовой отчёт не считан");
-        }
 
         int marchT = 0;
         for (RecordYear record : yearlyReport.records) {
@@ -152,10 +140,6 @@ public class ManagerYearlyReport {
     }
 
     int compareMarchF() {
-        if (yearlyReport == null) {
-            System.out.println("Годовой отчёт не считан");
-        }
-
         int marchF = 0;
         for (RecordYear record : yearlyReport.records) {
             if (record.isExpense.equals("false") && record.month == 03) {

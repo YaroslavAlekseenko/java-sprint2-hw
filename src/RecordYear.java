@@ -1,3 +1,4 @@
+// Класс для записи годового отчёта
 public class RecordYear {
     int month;
     int amount;
@@ -9,4 +10,3 @@ public class RecordYear {
         isExpense = newIsExpense;
     }
 }
-// Класс для записи годового отчёта

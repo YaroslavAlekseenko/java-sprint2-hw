@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 
+// Класс для хранения месячного отчёта
+
 public class MonthlyReport {
 
     ArrayList<RecordMonth> records;
@@ -8,4 +10,3 @@ public class MonthlyReport {
         records = newRecords;
     }
 }
-// Класс для хранения месячного отчёта

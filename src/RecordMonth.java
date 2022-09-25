@@ -1,3 +1,4 @@
+// Класс для записи месячного отчёта
 public class RecordMonth {
     String itemName;
     String isExpense;
@@ -11,4 +12,3 @@ public class RecordMonth {
         sumOfOne = newSumOfOne;
     }
 }
-// Класс для записи месячного отчёта

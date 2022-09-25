@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 
+// Класс для хранения годового отчёта
+
 public class YearlyReport {
 
     ArrayList<RecordYear> records;
@@ -8,4 +10,3 @@ public class YearlyReport {
         records = newRecords;
     }
 }
-// Класс для хранения годового отчёта
